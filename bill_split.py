@@ -30,8 +30,8 @@ for i in A:
 
     for field,person in enumerate(people):
         field+=1
-        share = float(i[field])
-        amount = (share/n_shares) * cost
+        share = int(i[field])
+        amount = round((share/n_shares) * cost , 2)
         D[person]['items'].append((item, share, amount))
         D[person]['amount']+=amount
 
@@ -42,16 +42,19 @@ for p in people:
 
 extra = total-subtotal
 for p in people:
-    D[p]['tax'] = (D[p]['amount']/subtotal)*extra
-    D[p]['total'] = D[p]['amount'] + D[p]['tax']
+    D[p]['tax'] = round((D[p]['amount']/subtotal)*extra, 2)
+    D[p]['total'] = round(D[p]['amount'] + D[p]['tax'] , 2)
 
-
+final_total = 0
 for p in D:
     print(p, 'items:')
     for item in D[p]['items']:
         print(item)
-    print(p,'subtotal',D[p]['amount'])
-    print(p,'tax',D[p]['tax'])
-    print(p,'total',D[p]['total'])
+    print(p,'subtotal', round(D[p]['amount'],2))
+    print(p,'tax/discount',D[p]['tax'])
+    print(p,'total', D[p]['total'])
+    final_total+=D[p]['total']
     print()
+
+print('final_total',final_total)
 
