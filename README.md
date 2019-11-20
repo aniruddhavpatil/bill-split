@@ -16,4 +16,5 @@ Input File Format
 ```
 
 `<name_x_share>` can be integers or decimals
+
 The file `test.txt` contains a test input.
