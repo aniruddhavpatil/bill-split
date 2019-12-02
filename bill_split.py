@@ -30,7 +30,7 @@ for i in A:
 
     for field,person in enumerate(people):
         field+=1
-        share = int(i[field])
+        share = float(i[field])
         amount = round((share/n_shares) * cost , 2)
         D[person]['items'].append((item, share, amount))
         D[person]['amount']+=amount
