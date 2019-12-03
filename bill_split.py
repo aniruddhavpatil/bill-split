@@ -1,4 +1,5 @@
 import sys
+
 filename = sys.argv[1]
 f = open(filename, 'r')
 F = f.readlines()
@@ -18,7 +19,6 @@ for i in people:
             'total': 0,
             }
 
-
 for i in A:
     item = i[0]
     n_shares = 0
@@ -34,7 +34,6 @@ for i in A:
         amount = round((share/n_shares) * cost , 2)
         D[person]['items'].append((item, share, amount))
         D[person]['amount']+=amount
-
 
 subtotal = 0
 for p in people:
