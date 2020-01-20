@@ -1,0 +1,25 @@
+lorem items:
+('x', 1.0, 1.0)
+('y', 1.0, 1.0)
+('z', 1.0, 2.0)
+lorem subtotal 4.0
+lorem tax/discount 0.28
+lorem total 4.28
+
+ipsum items:
+('x', 2.0, 2.0)
+('y', 1.0, 1.0)
+('z', 3.0, 6.0)
+ipsum subtotal 9.0
+ipsum tax/discount 0.63
+ipsum total 9.63
+
+dolor items:
+('x', 3.0, 3.0)
+('y', 1.0, 1.0)
+('z', 2.0, 4.0)
+dolor subtotal 8.0
+dolor tax/discount 0.56
+dolor total 8.56
+
+final_total 22.47
