@@ -60,3 +60,4 @@ final_total
 ```
 
 The file `test_input.txt` contains a test input.
+The file `test_output.txt` contains a test output corresponding to `test_input.txt`.
