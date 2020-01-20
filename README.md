@@ -59,4 +59,4 @@ Output File Format
 final_total
 ```
 
-The file `test.txt` contains a test input.
+The file `test_input.txt` contains a test input.
