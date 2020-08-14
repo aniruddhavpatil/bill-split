@@ -55,5 +55,9 @@ for p in D:
     final_total+=D[p]['total']
     print()
 
+for p in people:
+    print(p, "total:", D[p]['total'])
+
+print()
 print('final_total',final_total)
 
