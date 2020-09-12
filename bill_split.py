@@ -32,7 +32,7 @@ for i in A:
         field+=1
         share = float(i[field])
         amount = round((share/n_shares) * cost , 2)
-        D[person]['items'].append((item, share, amount))
+        D[person]['items'].append((item, amount, str(int(share) if share.is_integer else share) + ' of ' + str(int(n_shares) if n_shares.is_integer else n_shares)))
         D[person]['amount']+=amount
 
 subtotal = 0
@@ -48,7 +48,7 @@ final_total = 0
 for p in D:
     print(p, 'items:')
     for item in D[p]['items']:
-        print(item)
+        print('%s $%s (%s)' % item)
     print(p,'subtotal', round(D[p]['amount'],2))
     print(p,'tax/discount',D[p]['tax'])
     print(p,'total', D[p]['total'])
