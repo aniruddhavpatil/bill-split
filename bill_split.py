@@ -46,14 +46,15 @@ for p in people:
 
 final_total = 0
 for p in D:
-    print(p, 'items:')
-    for item in D[p]['items']:
-        print('%s $%s (%s)' % item)
-    print(p,'subtotal', round(D[p]['amount'],2))
-    print(p,'tax/discount',D[p]['tax'])
-    print(p,'total', D[p]['total'])
-    final_total+=D[p]['total']
-    print()
+    if D[p]['total'] > 0:
+        print(p, 'items:')
+        for item in D[p]['items']:
+            print('%s $%s (%s)' % item)
+        print(p,'subtotal', round(D[p]['amount'],2))
+        print(p,'tax/discount',D[p]['tax'])
+        print(p,'total', D[p]['total'])
+        final_total+=D[p]['total']
+        print()
 
 for p in people:
     print(p, "total:", D[p]['total'])
